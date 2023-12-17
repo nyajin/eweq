@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freeculture MOVIE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC000; /* 황금색 배경 */
+            color: darkgreen;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+        header img {
+            width: 200px; /* 원하는 가로 크기로 설정 */
+            height: auto;
+            padding: 5px 25px; /* 세로 크기는 가로 크기에 비례하도록 자동 조정 */
+        }
+        /* 주 메뉴에 대한 스타일 설정 */
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .menu {
+            background-color: transparent;
+            text-align: right;
+            padding: 15px 0;
+        }
+        .menu a {
+            text-decoration: none;
+            color: darkgreen;
+            margin-top: 150px;
+            margin-right:50px;
+        }
+        .menu a:hover {
+            color: black;
+        }
+    
+        .menu a[href="introduce.html"] {
+            color: black;
+        }
+        .menu a:hover[href="introduce.html"] {
+            color: darkgreen;
+        }
+
+        .top{
+            background-color:#FFC000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 5px;
+            padding: 25px;
+            pointer-events: none;
+        }
+       .top2{
+            font-size:20px;
+        }
+        .container {
+            display: flex;
+            margin-top: 21px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+             /* 화면 전체 높이에 대한 비율로 설정합니다. */
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            
+        }
+        td {
+            border: 1px solid transparent;
+            border-color: transparent; /* 테두리 색을 빨간색으로 설정합니다. */
+         }
+         .text{
+            text-align: center; 
+            line-height: 1px;
+            font-size:16px;
+         }
+        .wide{
+            margin-top:180px;
+        }
+        .card1 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+            
+        }
+        .card2 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+           
+        }
+
+        .card3 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+           
+        }
+        .card4 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+           
+        }
+
+        .card1:hover {
+            border: 4.5px solid green;
+        }
+
+        .card1::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0%;
+            transition: opacity 0.3s;
+            content: "정말 예측할 수 없는 코믹 영화이다. 애초에 경찰이 수사를 하기위해 치킨집을 연 것도 웃긴데 심지어 장사가 잘 된다니 정말 신선했다. 마지막에는 역시 범인을 잡는 부분까지.. 완벽하다. 영화를 본 사람이라면 가장 중요한 수원 왕갈비 통닭의 맛을 한번 쯤 궁금해 보았을 것이다. 그래서 나도 수원 왕갈비 통닭을 먹으러 갔다. 밥이랑 비벼먹으면 정말정말 맛있었다. 영화가 대박난 이유도, 수원 왕갈비 통닭이 대박난 이유도 알 것 같다.";
+        }
+        .card1:hover::after {
+            opacity: 100%;
+            
+        }
+       
+
+        .card2:hover {
+            border: 4.5px solid green;
+        }
+
+        .card2::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0%;
+            transition: opacity 0.3s;
+            content: "나는 지브리 영화중 토토로가 가장 좋다.언니와 동생이 주인공으로 나오는 점이 나와 비슷하고 무엇보다. 토토로라는 캐릭터가 너무 귀엽기 떄문이다. 공상을 많이 하는 나에게 어릴적에 토토로 같은 비밀 친구가 있으면 좋곘다고 생각했었다. 토토로야 실제로 존재한다면 나도 고양이 버스 태워주라";
+        }
+        .card2:hover::after {
+            opacity: 100%;
+            
+        }
+    
+        .card3:hover {
+            border: 4.5px solid green;
+        }
+
+        .card3::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0%;
+            transition: opacity 0.3s;
+            content: "프랭크는 사기꾼으로 나오지만 뭔가 따라해보고 싶은 생각이 든다. 사기를 치는걸 따라하는 건 아니지만 누구보다 여러 사람으로 살아오며 다양한 경험을 하였고, 불법 경로지만 자신이 잘하는 분야를 터득하여 직업도 가져 행복하게 산다. 경찰에게 걸릴 뻔 하다가도 머리를 영리하게 써서 빠져나가는 장면, 여러 방도로 사기를 치는 장면이 나올 떄마다 기발한 방법에 감탄을 하곤 한다.  시작부터 눈을 뗄 수 없는 두근두근 해지는 영화이다.";
+        }
+        .card3:hover::after {
+            opacity: 100%;
+            
+        }
+        .card4:hover {
+            border: 4.5px solid green;
+           
+        }
+
+        .card4::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0;
+            transition: opacity 0.3s;
+            content: "트루먼쇼를 보고 난 후 가끔 내 인생도 누군가 보고 있는 예능이 아닐까 하고 생각이 든다. 트루먼은 사람에 의해 만들어진 이상적인 세상에서 살았다. 짜여진 각본이었고 사람들에게 보여지는 삶이었기에 누구보다 안정적으로 살았을 것이다. 안정적인 삶을 사는것이 우선가치인 사람은 과연 어떤 선택을 할지 궁금해졌다. 누구보다 이상적인 삶이지만 누군가에게 감시당한다면 트루먼처럼 탈출을 할까 아니면 세상에 머무를까? 평생 안정적응로 살다가 현실세상의 복잡함을 알고도 도전하는 트루먼이 멋있다.";
+        }
+    
+        .card4:hover::after {
+            opacity: 100%;
+            
+        }
+        .chage{
+            color:black;
+        }
+        .story {
+            font-size: 12px;
+            text-align: right;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="wide">
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="movie/m1.jpg" alt="Movie Icon" width=auto height="350"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;극한직업</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;감독: 스티븐 스필버그<br>&nbsp;&nbsp;&nbsp;&nbsp;출연: 레오나드로 디카프리오, 톰 행크스</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card1">
+                            <p>낮에는 치킨장사! 밤에는 잠복근무! 지금까지 이런 수사는 없었다!<br>불철주야 달리고 구르지만 실적은 바닥, 급기야 해체 위기를 맞는 마약반!<br>더 이상 물러설 곳이 없는 팀의 맏형 고반장은 국제 범죄조직의 국내 마약 밀반입 정황을 포착하고 장형사, 마형사, 영호, 재훈까지 4명의 팀원들과 함께 잠복 수사에 나선다.<br> 마약반은 24시간 감시를 위해 범죄조직의 아지트 앞 치킨집을 인수해 위장 창업을 하게 되고, 뜻밖의 절대미각을 지닌 마형사의 숨은 재능으로 치킨집은 일약 맛집으로 입소문이 나기 시작한다.<br>수사는 뒷전, 치킨장사로 눈코 뜰 새 없이 바빠진 마약반에게 어느 날 절호의 기회가 찾아오는데…<br>범인을 잡을 것인가, 닭을 잡을 것인가!</p>
+                            <p class="story">출처: 다음영화</p> 
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="movie/m2.jpeg" alt="Movie Icon" width=auto height="350"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;이웃집 토토로</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;원작/각본/감독: 미야자키 하야오</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card2">
+                            <p>숲속에 살고 있는 특별한 친구를 만났다!<br>도시를 떠나 시골로 이사 온 ‘사츠키’와 ‘메이’는 우연히 숲속에 살고 있는 신비로운 생명체 ‘토토로’를 만나 신비한 모험을 함께 한다.<br>그러던 어느 날, 어머니의 병원에서 위태로운 소식이 도착하고 언니 ‘사츠키’가 정신없이 아빠에게 연락을 취하는 와중에 ‘메이’가 행방불명 되는데….</p>
+                            <p class="story">출처: 다음영화</p> 
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="movie/m3.jpg" alt="Movie Icon" width=auto height="350"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;캐치 미 이프 유 캔</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;감독: 스티븐 스필버그<br>&nbsp;&nbsp;&nbsp;&nbsp;출연: 레오나드로 디카프리오, 톰 행크스</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card3">
+                            <p>2003년 전미를 뒤집은 희대의 사기극!<br>이것은 실화다!<br>1965년, FBI를 발칵 뒤집는 사건이 발생한다.<br> 파일럿을 가장해 모든 비행기의 무임승차는 기본, 50개 주 은행을 순회하며 무려 140만 달러를 횡령한 희대의 사기꾼이 나타난 것이다.<br> FBI는 최고의 베테랑 요원 칼을 수사에 투입하고, 번번히 놈의 속임수에 당하던 칼은 드디어 오랜 추적 끝에 범인의 정체를 알아낸다.<br> 그의 이름은 프랭크 아비그네일. 나이... 17살. 17살?!<br> 천재 사기꾼과 FBI 요원의 유쾌한 머리싸움은 이제 시작이다.</p>
+                            <p class="story">출처: 다음영화</p> 
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="movie/m4.jpg" alt="Movie Icon" width=auto height="350"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;트루먼쇼</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;감독: 피터 위어<br>&nbsp;&nbsp;&nbsp;&nbsp;출연: 짐 캐리, 에드 해리스</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card4">
+                            <p>220개국 17억 인구가 5천대 카메라로 지켜 본지 10909일째!<br>작은 섬에서 평범한 삶을 사는 30세 보험 회사원 트루먼 버뱅크, 아내와 홀어머니를 모시고 행복한 하루 하루를 보내던 어느 날, 하늘에서 조명이 떨어진다!<br>의아해 하던 트루먼은 길을 걷다 죽은 아버지를 만나고 라디오 주파수를 맞추다 자신의 일거수 일투족이 라디오에 생중계되는 기이한 일들을 연이어 겪게 된다.<br>지난 30년간 일상이라고 믿었던 모든 것들이 어딘가 수상하다고 느낀 트루먼은 모든것이 ‘쇼’라는 말을 남기고 떠난 첫사랑 ‘실비아’를 찾아 피지섬으로 떠나기로 결심한다.<br>가족, 친구, 회사… 하나부터 열까지 모든 것이 가짜인 ‘트루먼쇼’<br>과연 트루먼은 진짜 인생을 찾을 수 있을까?</p>
+                            <p class="story">출처: 다음영화</p>   
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+    <div class="top">
+        <h2>MOVIE</h2>
+        <div class="top2">
+            <str>Story&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like</str>
+        </div>
+    </div>
+    <div class="fixed-top">
+        <header>
+            <a href="index.html"><img src="images/logo.png" alt="로고"></a>
+        </header>
+        <div class="menu">
+            
+            <a href="introduce.html">INTRODUCE </a>
+            <a href="music.html">MUSIC</a>
+            <a href="book.html">BOOK</a>
+            <a href="movie.html">MOVIE</a> 
+        </div>
+       
+    </div>
+
+    
+</body>
+</html>

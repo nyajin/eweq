@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freeculture</title>
+    <style>
+        /* 전체 페이지에 대한 스타일 설정 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC000; /* 황금색 배경 */
+            color: darkgreen;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+        header img {
+            width: 200px; /* 원하는 가로 크기로 설정 */
+            height: auto;
+            padding: 5px 25px; /* 세로 크기는 가로 크기에 비례하도록 자동 조정 */
+        }
+        /* 주 메뉴에 대한 스타일 설정 */
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .menu {
+            background-color:#FFC000;
+            text-align: right;
+            padding: 15px 0;
+        }
+        .menu a {
+            text-decoration: none;
+            color: darkgreen;
+            margin-top: 150px;
+            margin-right:50px;
+        }
+        .menu a:hover {
+            color: black;
+        }
+        .menu a[href="introduce.html"] {
+            color: black;
+        }
+        .menu a:hover[href="introduce.html"] {
+            color: darkgreen;
+        }
+        /* 컨텐츠 섹션 스타일 */
+        .content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 18px;
+        }
+        /* 각 카드의 스타일 */
+        .card {
+            text-align: center;
+            border-style: solid;
+            border-color: darkgreen;
+            padding: 70px;
+            margin-top: 90px;
+            
+        }
+        
+        
+        .card:not(:first-of-type) {
+            margin-left: -3px; /* 카드의 테두리 겹치기 현상 조정 */
+        }
+        .card h2 {
+            margin-top: 0;
+        }
+        .card p {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        /* 아이콘을 감싸는 원형 요소 스타일 */
+        .icon-circle {
+            background-color: #ffffff;
+            border: 4.5px solid darkgreen;
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; /* 수평 중앙 정렬 */
+        }
+
+        .section{   
+            max-width:700px; 
+        }
+
+        .paragraph {
+            margin-bottom: -20px;
+            font-size: 50px;
+        }
+        .paragraph1 {
+            margin-bottom: -20px;
+            font-size: 45px;
+        }
+        .paragraph2 {
+            margin-bottom: -20px;
+            font-size: 20px;
+        }
+        .picture{
+            float: right;
+            margin-top:50px;
+        }
+        .text-wrapper {
+            display: inline-block;
+            max-width: 50%;
+        }
+        .transparent-box {
+            width: 100%;
+            height: 200px;
+            background-color: transparent; /* 투명도 조절을 위해 RGBA 색상 사용 */
+            
+        }
+        .transparent-box2 {
+            width: 80px;
+            height: 200px;
+            background-color: transparent; /* 투명도 조절을 위해 RGBA 색상 사용 */
+            
+        }
+        
+        #musicsection {
+            scroll-behavior: smooth;
+        }
+        
+
+         
+    </style>
+</head>
+<body>
+   
+
+    <div class="content">
+        <!-- 음악 카드 -->
+        
+        <a href="#musicsection" style="text-decoration: none; color: #006400;">
+            <div class="card" style="border: 4.5px solid transparent;" onmouseover="this.style.borderColor='darkgreen';" onmouseout="this.style.borderColor='transparent';">  
+                <div class="icon-circle">
+                    <!-- 아이콘 이미지가 들어갈 자리 -->
+                    <img src="images/headphone.png" alt="Music Icon" width="100" height="100">
+                </div>
+                <h2 style="text-decoration: none; margin-bottom: 0;">LIFE <br>IS <br>MUSIC</h2>
+            </div>
+        </a>
+        
+        <!-- 책 카드 -->
+        <a href="#booksection" style="text-decoration: none; color: darkgreen;">
+        <div class="card" style="border: 4.5px solid transparent;" onmouseover="this.style.borderColor='darkgreen';" onmouseout="this.style.borderColor='transparent';">
+            <div class="icon-circle">
+                <!-- 아이콘 이미지가 들어갈 자리 -->
+                <img src="images/book.png" alt="Book Icon" width="100" height="100">
+            </div>
+            <h2>LIFE <br>IS <br>BOOK</h2>
+        </div>
+        <!-- 영화 카드 -->
+        <a href="#moviesection" style="text-decoration: none; color: darkgreen;">
+        <div class="card" style="border: 4.5px solid transparent;" onmouseover="this.style.borderColor='darkgreen';" onmouseout="this.style.borderColor='transparent';">
+            <div class="icon-circle">
+                <!-- 아이콘 이미지가 들어갈 자리 -->
+                <img src="images/movie.png" alt="Movie Icon" width="90" height="90">
+            </div>
+            <h2>LIFE <br>IS <br>MOVIE</h2>
+        </div>
+    </div>
+    <div class="transparent-box"></div>
+    
+
+    <a id="musicsection">
+            <table>
+                <tr>
+                    <td>
+                        <div class="section">
+                          <p class="paragraph">음악의 언어는 무한하다.</p>
+                          <p class="paragraph2">-발자크-</p>
+                          <p class="paragraph" >말이 통하지 않는 곳에서 통하는 것은 음악이다.</p>
+                          <p class="paragraph2" >-안데르센-</p>
+                          <p class="paragraph" >음악은 상처난 마음에 대한 약이다.</p>
+                          <p class="paragraph2" >-알프레드 윌리암 헌트-</p>
+                          <p class="paragraph">언어가 끝나는 곳에서 음악은 시작된다.</p>
+                          <p class="paragraph2">-모짜르트-</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="transparent-box2"></div>
+                    </td>
+                    <td>
+                        <p style="width:1px">사진을 누르시면 카테고리로 이동합니다.</p>
+                    </td>
+                        <div class="picture">
+                            <a href="music.html"><img src="images/musicback.jpg" alt="musicback" width="600px" height="685px"></a>
+                        </div>  
+                </tr>
+            </table> 
+            <p><br></p>
+    </a>
+    <a id="booksection"> 
+            <table>
+                <tr>
+                    <td>
+                        <a href="book.html"><br><br><img src="images/bookback.jpg" alt="bookback" width="600px" height="685px"></a>
+                    </td>
+                    
+                    <td>
+                        <p style="width:1px">사진을 누르시면 카테고리로 이동합니다.</p>
+                    </td>
+                    <td>
+                        <div class="transparent-box2"></div>
+                    </td>
+                    <td>
+                        <div class="section">
+                            <p class="paragraph1">약으로 병을 고치듯이 독서로 마음을 다스린다.</p>
+                            <p class="paragraph2">-카이사르-</p>
+                            <p class="paragraph1" >책이란 넓디넓은 시간의 바다를 지나가는 배이다.</p>
+                            <p class="paragraph2" >-프랜시스 베이컨-</p>
+                            <p class="paragraph1" >책없는 방은 영혼없는 육체와 같다.</p>
+                            <p class="paragraph2" >-키케로-</p>
+                            <p class="paragraph1">책 속에는 과거의 영혼이 드러누워있다.</p>
+                            <p class="paragraph2">-칼라일-</p>
+                        </div>
+                    </td>
+                   
+                </tr>
+            </table> 
+            <p><br></p>
+    </a>
+    <a id="moviesection"> 
+        <table>
+            <tr>
+                <td>
+                    <div class="section">
+                      <p class="paragraph1">의미란 계속 물을 수록 무의미해진다.</p>
+                      <p class="paragraph2">-스텐리 큐브릭-</p>
+                      <p class="paragraph1" >사람들이 내 영화를 이해하기 전에 느끼길 바란다.</p>
+                      <p class="paragraph2" >-로버트 브레송-</p>
+                      <p class="paragraph1" >영화란 지루한 부분이 커트된 인생이다.</p>
+                      <p class="paragraph2" >-알프레드 히치콕-</p>
+                      <p class="paragraph1">필요하다면 악마로부터 영화를 뺏어올 것이다.</p>
+                      <p class="paragraph2">-베르너 헤어조크-</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="transparent-box2"></div>
+                </td>
+                <td>
+                    <p style="width:1px">사진을 누르시면 카테고리로 이동합니다.</p>
+                </td>
+                    <div class="picture">
+                        <a href="movie.html"><img src="images/movieback.jpg" alt="movieback" width="600px" height="685px"></a>
+                    </div> 
+                    
+            </tr>
+        </table> 
+        <p><br></p>
+    </a>
+    <div class="fixed-top">
+        <header>
+            <a href="index.html"><img src="images/logo.png" alt="로고"></a>
+        </header>
+        <div class="menu">
+            <a href="introduce.html">INTRODUCE</a>
+            <a href="music.html">MUSIC</a>
+            <a href="book.html">BOOK</a>
+            <a href="movie.html">MOVIE</a>
+            
+        </div>
+    </div>
+</body>
+</html>

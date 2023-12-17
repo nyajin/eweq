@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freeculture MUSIC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC000; /* 황금색 배경 */
+            color: darkgreen;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+        header img {
+            width: 200px; /* 원하는 가로 크기로 설정 */
+            height: auto;
+            padding: 5px 25px; /* 세로 크기는 가로 크기에 비례하도록 자동 조정 */
+        }
+        /* 주 메뉴에 대한 스타일 설정 */
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .menu {
+            background-color: transparent;
+            text-align: right;
+            padding: 15px 0;
+            
+        }
+        .menu a {
+            text-decoration: none;
+            color: darkgreen;
+            margin-top: 150px;
+            margin-right:50px;
+            
+        }
+        
+        .menu a:hover {
+            color: black;
+        }
+        .menu a[href="introduce.html"] {
+            color: black;
+        }
+        .menu a:hover[href="introduce.html"] {
+            color: darkgreen;
+        }
+
+        .top{
+            background-color:#FFC000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 5px;
+            padding: 25px;
+            pointer-events: none;
+        }
+       .top2{
+            font-size:20px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+             /* 화면 전체 높이에 대한 비율로 설정합니다. */
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        td {
+            border: 1px solid black;
+            border-color: transparent; /* 테두리 색을 빨간색으로 설정합니다. */
+         }
+         .text{
+            text-align: center; 
+            line-height: 1px;
+            font-size:16px;
+         }
+        .wide{
+            margin-top:200px;
+        }
+
+        .icon-container svg {
+             fill: darkgreen;
+        }
+        .icon-container:hover svg {
+            fill: black; /* 마우스 커서가 올라갔을 때의 색상 */
+        }
+
+        .pick{
+            margin-left: 300px;
+            margin-top: 80px;
+            line-height: 1px;
+        }
+        .pickmusic{
+            display: flex;
+            margin-left: 440px;
+            margin-top: 30px;
+        }
+
+        .transparent-box {
+            width: 50px;
+            height: 160px;
+            background-color: transparent; /* 투명도 조절을 위해 RGBA 색상 사용 */
+            
+        }
+        .blank{
+            margin-bottom: 140px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+   
+    <div class="wide">
+    <div class="container">
+        <table>
+            <tr>
+                <td><h2>등굣길에&nbsp;듣는&nbsp;<br>신나는&nbsp;노래&nbsp;&nbsp;&nbsp;<br></h2></td>
+                <td> <div class="icon-container svg">
+                        <a href="https://www.youtube.com/watch?v=rPrRCWpSbU4" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                        <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                        <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+                        <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+                        <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                        </svg></a>&nbsp;&nbsp;&nbsp;</td>
+                    </div>
+                <td>
+                    <img src="music/m_1_1.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_1_2.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_1_3.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_1_4.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_1_5.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><div class="text"><h3>좋아요</h3><br>방탄소년단<br></div></td>
+                <td><div class="text"><h3>다라리</h3><br>트레져</div></td>
+                <td><div class="text"><h3>Polaroid Love</h3><br>엔하이픈</div></td>
+                <td><div class="text"><h3>Day 1</h3><br>레드벨벳</div></td>
+                <td><div class="text"><h3>Say Yes</h3><br>로꼬,펀치</div></td>
+                
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <td><h2>잔잔하면서도&nbsp;<br>강렬한&nbsp;노래&nbsp;&nbsp;&nbsp;<br></h2></td>
+                <td> <div class="icon-container svg">
+                        <a href="https://www.youtube.com/watch?v=8LKEzRZvsBg" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                        <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                        <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+                        <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+                        <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                        </svg></a>&nbsp;&nbsp;&nbsp;</td>
+                    </div>
+                <td>
+                    <img src="music/m_2_1.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_2_2.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_2_3.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_2_4.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_2_5.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><div class="text"><h3>Can't Control Myself</h3><br>태연</div></td>
+                <td><div class="text"><h3>Gone</h3><br>로제</div></td>
+                <td><div class="text"><h3>Anymore</h3><br>전소미</div></td>
+                <td><div class="text"><h3>Killing Me</h3><br>청하</div></td>
+                <td><div class="text"><h3>주인공</h3><br></div>선미</td>
+                
+            </tr>
+        </table>
+    </div>
+    <div class="container">
+        <table>   
+            <tr>
+                <td><h2>여름에&nbsp;듣는&nbsp;<br>청량한&nbsp;노래&nbsp;&nbsp;&nbsp;<br></h2></td>
+                <td>
+                    <div class="icon-container svg">
+                        <a href="https://www.youtube.com/watch?v=oK_ffvHgULI" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                        <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                        <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+                        <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+                        <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                      </svg></a>&nbsp;&nbsp;&nbsp;</td>
+                    </div>
+                <td>
+                    <img src="music/m_3_1.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_3_2.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_3_3.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_3_4.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_3_5.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><div class="text"><h3>All Night</h3><br>아스트로</div></td>
+                <td><div class="text"><h3>Magic Iland</h3><br>투모로우바이투게더</div></td>
+                <td><div class="text"><h3>Chewing Gum</h3><br>엔시티드림</div></td>
+                <td><div class="text"><h3>예쁘다</h3><br>세븐틴</div></td>
+                <td><div class="text"><h3>Love ME Right</h3><br>엑소</div></td>
+                
+            </tr>
+        </table>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <td><h2>믿고&nbsp;듣는&nbsp;<br>아이유&nbsp;노래&nbsp;&nbsp;&nbsp;<br></h2></td>
+                <td> <div class="icon-container svg">
+                    <a href="https://www.youtube.com/watch?v=ySufcFMG0m0" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-music-note-list" viewBox="0 0 16 16">
+                    <path d="M12 13c0 1.105-1.12 2-2.5 2S7 14.105 7 13s1.12-2 2.5-2 2.5.895 2.5 2z"/>
+                    <path fill-rule="evenodd" d="M12 3v10h-1V3h1z"/>
+                    <path d="M11 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 16 2.22V4l-5 1V2.82z"/>
+                    <path fill-rule="evenodd" d="M0 11.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 7H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 .5 3H8a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5z"/>
+                  </svg></a>&nbsp;&nbsp;&nbsp;</td>
+                </div>
+                <td>
+                    <img src="music/m_4_1.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_4_2.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_4_3.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_4_4.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+                <td>
+                    <img src="music/m_4_5.jpg" alt="Music Icon" width="160" height="160">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><div class="text"><h3>BBIBBI</h3><br>아이유</div></td>
+                <td><div class="text"><h3>Celebrity</h3><br>아이유</div></td>
+                <td><div class="text"><h3>LILAC</h3><br>아이유</div></td>
+                <td><div class="text"><h3>Blueming</h3><br>아이유</div></td>
+                <td><div class="text"><h3>어푸</h3><br>아이유</div></td>
+                
+            </tr>
+        </table>
+    </div>
+
+    <div class="pick">
+        <h2>나진's PICK!</h2><br>사진을 누르면 링크로 이동합니다.
+    </div>
+    
+    <div class="pickmusic">
+         <table>
+             <tr>
+                 <td rowspan="2"> <a href="https://www.youtube.com/watch?v=u2ePT5OlZ7o" target="_blank"><img src="music/m_5_1.jpg" alt="Music Icon" width="160" height="160"></a></td>
+                    
+             </tr>
+             <tr>
+                <td style="width: 200px;">
+                    <b>Don't Hate ME</b><br>에픽하이
+                </td>
+             </tr>
+        </table>
+        <div class="transparent-box"></div>
+        <table>
+            <tr>
+                <td rowspan="2"><a href="https://www.youtube.com/watch?v=HPQ5mqovXHo" target="_blank"><img src="music/m_5_2.jpg" alt="Music Icon" width="160" height="160"></a></td>
+               
+            </tr>
+            <tr>
+                <td style="width: 200px;">
+                    <b>덤디덤디</b><br>(여자)아이들
+                 </td>
+            </tr>
+         </table>
+    </div>
+    <div class="pickmusic">
+        <table>
+            <tr>
+                <td rowspan="2"><a href="https://www.youtube.com/watch?v=3-ptVHZZdBg" target="_blank"><img src="music/m_5_3.jpg" alt="Music Icon" width="160" height="160"></a></td>
+                   
+            </tr>
+            <tr>
+               <td style="width: 200px;">
+                   <b>Bubble</b><br>스테이씨
+               </td>
+            </tr>
+       </table>
+       <div class="transparent-box"></div>
+       <table>
+           <tr>
+               <td rowspan="2"><a href="https://www.youtube.com/watch?v=y9kkXTucnLU" target="_blank"><img src="music/m_5_4.jpg" alt="Music Icon" width="160" height="160"></a></td>
+              
+           </tr>
+           <tr>
+               <td style="width: 200px;">
+                   <b>SMILIY</b><br>최예나
+                </td>
+           </tr>
+        </table>
+   </div>
+   <div class="blank"></div>
+    
+    <div class="top">
+        <h2>MUSIC</h2>
+        <div class="top2">
+            <str>PlayList&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like</str>
+        </div>
+    </div>
+
+    <div class="fixed-top">
+        <header>
+            <a href="index.html"><img src="images/logo.png" alt="로고"></a>
+        </header>
+        <div class="menu">
+            <a href="introduce.html">INTRODUCE</a>
+            <a href="music.html">MUSIC</a>
+            <a href="book.html">BOOK</a>
+            <a href="movie.html">MOVIE</a>
+            
+        </div>
+       
+    </div>
+</body>
+</html>

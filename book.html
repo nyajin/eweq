@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freeculture BOOK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFC000; /* 황금색 배경 */
+            color: darkgreen;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+        header img {
+            width: 200px; /* 원하는 가로 크기로 설정 */
+            height: auto;
+            padding: 5px 25px; /* 세로 크기는 가로 크기에 비례하도록 자동 조정 */
+        }
+        /* 주 메뉴에 대한 스타일 설정 */
+        .fixed-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .menu {
+            background-color: transparent;
+            text-align: right;
+            padding: 15px 0;
+        }
+        .menu a {
+            text-decoration: none;
+            color: darkgreen;
+            margin-top: 150px;
+            margin-right:50px;
+        }
+        .menu a:hover {
+            color: black;
+        }
+    
+        .menu a[href="introduce.html"] {
+            color: black;
+        }
+        .menu a:hover[href="introduce.html"] {
+            color: darkgreen;
+        }
+      
+        .top{
+            background-color:#FFC000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 5px;
+            padding: 25px;
+            pointer-events: none;
+        }
+       .top2{
+            font-size:20px;
+        }
+        .container {
+            display: flex;
+            margin-top: 21px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+             /* 화면 전체 높이에 대한 비율로 설정합니다. */
+        }
+
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            
+        }
+        td {
+            border: 1px solid transparent;
+            border-color: transparent; /* 테두리 색을 빨간색으로 설정합니다. */
+         }
+         .text{
+            text-align: center; 
+            line-height: 1px;
+            font-size:16px;
+         }
+        .wide{
+            margin-top:180px;
+        }
+        .card1 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+            
+        }
+        .card2 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+           
+        }
+
+        .card3 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+           
+        }
+        .card4 {
+            border: 1px solid transparent;
+            padding: 20px;
+            width:500px;
+            height: auto;
+            background-color: transparent;
+            position: relative;
+            transition: border-color 0.3s;
+           
+        }
+
+        .card1:hover {
+            border: 4.5px solid green;
+        }
+
+        .card1::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0%;
+            transition: opacity 0.3s;
+            content: "공감능력은 사람이 상호작용할 때 굉장히 중요한 요소이다. 하지만 스마트폰은 우리의 주의를 파편화 시켜 분열된 자아를 만든다고 한다. 스마트폰 안에 있는 수많은 영상과 글 등으로 우리는 사방으로 잡아당겨지고 있기 때문에 한 곳에 오롯이 관심을 주기에 어렵고 상대의 관점에서 사물을 바라보는 것도 어려운 일이다. 사람들은 짧은 숏폼의 유행으로 긴 글을 통해 자신의 이야기를 전달하는 법을 잊었다.  스마트폰과 소셜미디어가 불러온 이 부정적인 현상을 줄이기 위해서는 당연하게도 줄이는 방법뿐이다. 하지만 이것은 정말로, 정말로 어렵다. 이 책에서는 해결책을 제시했다. 단 하루 ‘디지털 없는 날’을 만드는 것이다. 계획은 해 놓았지만 막상 없으려니 일상생활이 불편해서 다시 스마트폰을 잡곤 했다. 책을 읽은 만큼 다시 마음을 다잡고 조금씩 줄여나가 보겠다.";
+        }
+        .card1:hover::after {
+            opacity: 100%;
+            
+        }
+       
+
+        .card2:hover {
+            border: 4.5px solid green;
+        }
+
+        .card2::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0%;
+            transition: opacity 0.3s;
+            content: "마음의 가난이라는 제목으로 구성된 내용이 있다. 마음이 비어있어야 소소한 것들도 더욱이 선물로 받아들일 수 있다는 내용이다. 나도 나름 작은것에도 감사하게 살기 위해서 종종 산책을 하곤한다. 산책을 하다가 좋아하는 노래를 들으며 집에 오면 일상 속에 소소한 다른 사람들의 일상이 보인다. 그 점이 마음을 편안하게 만들어주고 작은 행복이다. 마음의 가난을 위해 마음을 비우라는 것을 몰랐기 때문에 의식적으로 생각했다.이후에는 마음을 비우는 산책으로 도전해보아야겠다. 행복한 사람이 된다는 건 많은 노력과 시간이 필요한 것 같다.";
+        }
+        .card2:hover::after {
+            opacity: 100%;
+            
+        }
+    
+        .card3:hover {
+            border: 4.5px solid green;
+        }
+
+        .card3::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0%;
+            transition: opacity 0.3s;
+            content: "챗GPT는 검은 백조처럼 세상에 나타나 세상의 질서를 송두리째 뒤흔들고 있다. 사람들이 놀라는 기능은 사람이 문제점이나 질문을 제시하면 그것에 맞는 대답을 형성해준다는 것이다. 예를들어 학습에 어려움을 겪어 챗gpt에게 물어보면 맞춤형 학습방법을 알려주고, 고객서비스 업무에 챗GPT를 도입하면서 실시간으로 고객과 대화할 수 있다. 하지만 어떤 질문이든지 답이 척척 내놓는 것처럼 보이는 챗GPT는 만능이 아니다. 문제점을 당연하게도 가지고 있다. 바로 편향성을 가지고 있다는 것이다. 훈련받은 데이터 안에 편향성을 가지고 있는 데이터가 들어있다면 챗GPT도 편향성을 가지게 된다. 이런 부분에 있어서는 인종차별이나 남녀갈등 등을 부추길 수 있기 때문에 굉장한 문제라고 생각한다.";
+        }
+        .card3:hover::after {
+            opacity: 100%;
+            
+        }
+        .card4:hover {
+            border: 4.5px solid green;
+        }
+
+        .card4::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFC000;
+            color:darkgreen;
+            opacity: 0;
+            transition: opacity 0.3s;
+            content: "가장 인상이 깊은 부분은 끈적함 없애기 라는 구절이다. 여기서 끈적함이라는 것은 생산성을 낮추고 이동속도를 느리게 만드는 요소를 끈쩍함이라고 비유했다. 끈적함 없애기라는 구절을 보고 나니 내가 당장은 실력이 없더라도 내가 연습해야 하는 부분은 코드를 빨리 작성하는 것이 아닌 섬세하고 효율적으로 코드를 작성하는 법을 연습하여 끈적함을 없애야겠다고 다짐했다. 또 인상 깊은 부분은 ‘안전 규정은 희생자의 피로 쓰인다‘ 라는 구절이다. 이부분은 소프트웨어 뿐만아니라 사회적으로도 적용이 되는 말이라서 마음이 아팠다. 어떠한 희생이 있었기에 그에 대한 규정이 생겨 우리가 좀 더 안전하게 사는 것이기 떄문이다. 항상 감사하게 생각을 해야한다.";
+        }
+    
+        .card4:hover::after {
+            opacity: 100%;
+            
+        }
+        .chage{
+            color:black;
+        }
+        
+        .source {
+            font-size: 12px;
+            text-align: right;
+        }
+        .transparent-box {
+            width: 100%;
+            height: 500px;
+            background-color: transparent; /* 투명도 조절을 위해 RGBA 색상 사용 */
+            
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="wide">
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="book/b3.jpeg" alt="Book Icon" width=auto height="350"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;고립의 시대: 초연결 셰계에 연결된 우리들</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;노리나 허츠 저/홍정인 역 </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card1">
+                            <p>작가는 스마트폰과 도시의 비대면 시스템, 감시 노동에 갇힌 채 살아가는 21세기 현대인이 소통 본능을 잃은 ‘외로운 생쥐’처럼 서로를 공격하고 있다고 말한다.<br> 외로움과 고립감은 더 이상 개인의 문제로 끝나지 않고 이 사회를 소외와 배제, 양극화와 정치적 극단주의로 내몬다는 것이다<br>우리 시대에 만연한 외로움과 그 사회 경제적 비용을 밀도 있게 분석하며 영국 출간 당시 주요 언론의 찬사를 받은 이 책는 우리가 일하고 투표하고 소통하는 방식을 무너뜨리는 ‘고립 사회’의 근원을 파헤친다.<br>과연 우리는 어떻게 분열된 ‘우리’를 치유하고 코로나19로 무너진 사회를 재건할 것인가.<br>이 책이 바로 그 거대한 질문의 시작이 될 것이다.</p>
+                            <p class="source">출처: 예스24 도서</p>  
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="book/b2.jpeg" alt="Book Icon" width=auto height="350"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;아주 보통의 행복</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;최인철 저</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card2">
+                            <p>1부는 코로나19로 인해 달라진 행복의 3가지 변화를 소개하고, 2부는 저자가 느낀 삶에 관한 단상들을 위트 있는 필치로 담아냈다.<br>‘평범하기에 더욱 소중한 보통의 행복’이라는 메시지는 진지하지만, 형식은 전혀 무겁지 않다. 삶을 향해 한마디 농담을 던지듯 경쾌하게 풀어낸 글들은 오히려 깊은 여운을 남긴다.<br>우리는 매일 고민한다. ‘나는 잘살고 있는 것인지, 내 삶은 행복한 것인지’. 정해진 답은 없다. 행복의 형태는 사람마다 다르기 때문이다.<br>이 책은 나의 행복을 어떻게 정의하고, 어떻게 만들어나가야 하는지에 대해 스스로 답을 찾을 수 있는 소중한 가이드북이 되어줄 것이다.</p>
+                            <p class="source">출처: 예스24 도서</p>
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="book/b4.jpeg" alt="Book Icon" width=auto height="350"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;챗 GPT 기회인가 위기인가</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;서민준, 이충환, 한상기, 한세희 공저</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card3">
+                            <p>이 책은 언어모델 인공지능인 챗GPT에 대한 역사, 구조, 비즈니스 임팩트 등을 다루며, 챗GPT가 가지고 있는 기술적, 윤리적, 법적 이슈까지 다룬다.<br> 또한, GPT-4에 대한 최신 정보와 함께, 챗GPT가 미래에 어떤 산업과 직업을 혁신시키고 어떤 사업이 도태될 수 있는지 예측한다.<br> 한국 및 세계의 IT 기업들의 경쟁력 진단과 앞으로 나아갈 방향도 제시되어 있다.<br> 이 책은 챗GPT 시대를 살아가는데 도움이 되는 필독서로서, 다양한 전문가들의 의견과 성공 이유, 응용법이 정리되어 있다.</p>
+                            <p class="source">출처: 예스24 도서</p>
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td rowspan="2" style="vertical-align: top;"> <img src="book/b5.jpeg" alt="Book Icon" width=auto height="315"></td>
+                    <td><b>&nbsp;&nbsp;&nbsp;&nbsp;소프트웨어 장인 정신 이야기</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;로버트 C. 마틴 저 / 정지용 역</td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card4">
+                            <p>작가는 개발자들에게 '소프트웨어 장인 정신'을 제안하는데, 이는 개발자들이 전문성과 책임을 가지고 자신의 분야에서 숙련된 경지에 도달해야 한다는 주장이다.<br> 이 책에서는 주요 애자일 개발 실천법인 테스트 주도 개발, 리팩터링, 단순한 설계 등을 개발자들이 어떻게 적용해야 하는지에 대해 설명한다.<br> 또한, 개발자로서의 기준과 윤리에 대한 중요성을 강조하며 소프트웨어 개발자가 단순한 기능인이 아닌 책임감과 자부심을 가져야 한다고 강조한다.</p>   
+                            <p class="source">출처: 예스24 도서</p>
+                        </div>
+                    </td>
+                 </tr>            
+            </table>
+        </div>
+       
+    <div class="top">
+        <h2>BOOK</h2>
+        <div class="top2">
+            <str>Story&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Like</str>
+        </div>
+    </div>
+    <div class="fixed-top">
+        <header>
+            <a href="index.html"><img src="images/logo.png" alt="로고"></a>
+        </header>
+        <div class="menu">
+            
+            <a href="introduce.html">INTRODUCE </a>
+            <a href="music.html">MUSIC</a>
+            <a href="book.html">BOOK</a>
+            <a href="movie.html">MOVIE</a> 
+        </div>
+       
+    </div>
+
+    
+</body>
+</html>
